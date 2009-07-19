@@ -1,0 +1,2 @@
+ruby ip_changed_notifier.rb <your email>
+#if you want that it send it just if your ip really had change add: -r
