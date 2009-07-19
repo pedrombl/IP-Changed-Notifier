@@ -1,2 +1,4 @@
-ruby ip_changed_notifier.rb <your email>
-#if you want that it send it just if your ip really had change add: -r
+--> To run: ruby ip_changed_notifier.rb <your email>
+
+- If you want that it send it just if your ip really had change add: -r
+- You need the gems ActionMailer and tlsmail. (sudo gem install tlsmail actionmailer)
