@@ -1,5 +1,5 @@
-require 'get_my_ip'
-require 'notifier'
+require File.dirname(__FILE__) + '/get_my_ip'
+require File.dirname(__FILE__) + '/notifier'
 
 
 class IPChangedNotifier
@@ -19,7 +19,7 @@ class IPChangedNotifier
   private
   def send_message()
     ip = GetMyIP.new
-    my_ip = ip.get_my_external_ip @send_anyway
+    my_ip = ip.get_my_external_ip @send_anyway, "http://meuip.datahouse.com.br/"
     if(my_ip)
       sub = "Seu IP"
       from = "mudou.ip@gmail.com"
@@ -32,5 +32,6 @@ class IPChangedNotifier
     
 end
 
+puts "Inicializando..."
 app = IPChangedNotifier.new
 app.run

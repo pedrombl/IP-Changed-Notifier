@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'spec'
-require 'lib/site_parser'
-require "spec/doubles/io_stub"
+require File.dirname(__FILE__) + "/../lib/site_parser.rb"
+require File.dirname(__FILE__) + "/doubles/io_stub"
 
 describe SiteParser do
   it "should find my IP from the site" do

@@ -1,10 +1,10 @@
 require 'open-uri'
-require 'lib/site_parser'
+require File.dirname(__FILE__) + '/site_parser'
 
 class GetMyIP
   
   def initialize
-    file = File.open("lib/ip.txt")
+    file = File.open(File.dirname(__FILE__) + "/ip.txt")
     @last_ip = file.readline.strip
     file.close
   end
@@ -28,7 +28,7 @@ class GetMyIP
   end
   
   def update_file(myIp)
-    file = File.open("lib/ip.txt", "w")
+    file = File.open(File.dirname(__FILE__) + "/ip.txt", "w")
     file.puts(myIp)
     file.close
   end
