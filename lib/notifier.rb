@@ -31,7 +31,7 @@ class Notifier
         :port => "587",
         :domain => "gmail.com",
         :user_name => "mudou.ip",
-        :password => "Hu3piDRuWr6FaShsA0lAnyaPTo9aSybi",
+        :password => "TpnwNcLm@pKPGYUKXTYY",
         :authentication => :plain
       }
       MailSent.deliver_message(to,msg,sub,from,cc)
